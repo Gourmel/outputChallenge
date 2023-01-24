@@ -1,0 +1,17 @@
+<!-- liste onomatopia est une propriété de type array de type string -->
+<!-- onReceiveNewOnomatopia() est une méthode de type void -->
+<!-- Dans le composant CreateOnomatopiaComponent  --> 
+<!-- je déclare <app-create-onomatopia>
+   (CreateOnomatopiaComponent) en tant que composant enfant pour 
+   intégrer le formulaire de création d'onomatopée dans 
+  le composant parent. -->
+
+<div>
+  <h1> liste des onomatopées</h1>
+  <ul>
+    <li *ngFor="let onomatopia of onomatopiaList">{{ onomatopia }}</li>
+  </ul>
+  <app-create-onomatopia 
+  (sendOnomatopiaToParent)="onReceiveNewOnomatopia($event)">
+</app-create-onomatopia>
+</div>
